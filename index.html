@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pay</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <form class="form">
+    <div class="form__head">
+        <div>
+            <span>
+                Pay Super
+            </span>
+                <img src="img\Message.png" class="message">
+            <span>
+                EN
+            </span>
+        </div>
+        <div>
+            <img src="img\Close.png">
+        </div>
+    </div>
+    <div class="form__body">
+        <div class="form__body--input payment">
+            <img src="img/Card.png">
+            Pay with card
+        </div>
+        <div class="form__body--input">
+            <input type="text" placeholder="Card number">
+        </div>
+        <div class="form__body--input mini">
+            <div class="date">
+                <input type="text" placeholder="Expiry date">
+            </div>
+            <div class="cvc">
+                <input type="text" placeholder="CVC/CVV">
+            </div>
+        </div>
+        <div  class="form__body--input">
+            <input type="text" placeholder="Cardholder name">
+        </div>
+        <div class="form__body--input">
+            <input type="email" placeholder="Email to receive the purchase">
+        </div>
+        <div>
+            <input type="checkbox" name="remember" class="remember-input">
+            <label for="remember" class="remember-label">Remember me <img src="img/Info.png"></label>
+        </div>
+    </div>
+    <div class="form__foot">
+        <img src="img\Lock.png">
+        PAY $29
+    </div> 
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
