@@ -88,7 +88,6 @@
 
 .remember-label:before {
     content: "";
-    color: #000;
     display: inline-block;
     margin-right: 11px;
     position: relative;
