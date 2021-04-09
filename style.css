@@ -43,6 +43,7 @@
     font-weight: 500;
     font-size: 15px;
     line-height: 23px;
+    color: white;
 }
 
 .mini {
@@ -58,6 +59,12 @@
 
 .cvc input{
     width: 85px;
+}
+
+:focus {
+    outline: none;
+    caret-color: white;
+    color: white;
 }
 
 .cvc {
@@ -110,8 +117,12 @@
     color: #FFFFFF;
     text-align: center;
     padding: 22px 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    
 }
 
 .remember-label img {
