@@ -57,8 +57,20 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+.cvc-img {
+    background: url(img/Info.png) no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
 .cvc input{
     width: 85px;
+    padding-right: 8px;
+}
+
+.cvc {
+    display: flex;
+    align-items: flex-end;
 }
 
 :focus {
@@ -67,9 +79,12 @@
     color: white;
 }
 
-.cvc {
-    background: url(img/Info.png) no-repeat;
-    background-position: 95px;
+.cvc-img:hover .popup{
+    display: block;
+}
+
+.cvc-img:hover{
+    background: url(img/Info-green.png) no-repeat;
 }
 
 .payment {
@@ -80,11 +95,11 @@
     background-position: 225px;
 }
 
-.remember-input {
-  display: none;
+.remember__input {
+    display: none;
 }
 
-.remember-label {
+.remember__label {
     font-weight: 500;
     font-size: 15px;
     line-height: 23px;
@@ -93,7 +108,7 @@
     vertical-align: middle;
   }
 
-.remember-label:before {
+.remember__label:before {
     content: "";
     display: inline-block;
     margin-right: 11px;
@@ -102,10 +117,16 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #424C66;
+    background: transparent;
     vertical-align: middle;
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
+}
+
+.remember__input:checked + label::before {
+    background: url(img/Exclude.png) no-repeat;
+    border-color: #06EAA7;
+    background-position: -1px;
 }
 
 .form__foot {
@@ -125,7 +146,48 @@
     
 }
 
-.remember-label img {
+.remember img {
     transform: translateY(3px);
     padding-left: 8px;
+}
+
+.popup {
+    display: none;
+}
+
+.popup__form {
+    position: absolute;
+    display: flex;
+    width: 280px;
+    height: 91px;
+    border-radius: 6px;
+    background: #333b50;
+    top: 105px;
+    left: 30px;
+    align-items: center;
+}
+
+.popup img {
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.popup__form--text {
+    padding-right: 20px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.6);
+    position: relative;
+}
+
+.popup__form--text::after {
+    content: '';
+    width: 13px;
+    height: 13px;
+    background: #333b50;
+    position: absolute;
+    top: 57px;
+    right: 2px;
+    transform: rotate(45deg);
 }

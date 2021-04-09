@@ -37,6 +37,17 @@
             </div>
             <div class="cvc">
                 <input type="password" placeholder="CVC/CVV" pattern="[0-9]{3}">
+                <div class="cvc-img">
+                    <div class="popup">
+                        <div class="popup__form">
+                            <div> <img src="img/CCV icon.png">
+                            </div>
+                            <div class="popup__form--text">
+                                Three digits located <br> on the back of the card
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div  class="form__body--input">
@@ -45,9 +56,10 @@
         <div class="form__body--input">
             <input type="email" placeholder="Email to receive the purchase">
         </div>
-        <div>
-            <input type="checkbox" name="remember" class="remember-input">
-            <label for="remember" class="remember-label">Remember me <img src="img/Info.png"></label>
+        <div class="remember">
+            <input type="checkbox" id="remember" name="remember" class="remember__input">
+            <label for="remember" class="remember__label">Remember me</label>
+            <img src="img/Info.png">
         </div>
     </div>
     <button class="form__foot">
