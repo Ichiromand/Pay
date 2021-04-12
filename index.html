@@ -20,7 +20,7 @@
             </span>
         </div>
         <div>
-            <img src="img\Close.png">
+            <img class="close-img" src="img\Close.png">
         </div>
     </div>
     <div class="form__body">
@@ -29,14 +29,17 @@
             Pay with card
         </div>
         <div class="form__body--input">
-            <input type="text" placeholder="Card number">
+            <input type="text" placeholder=" ">
+            <label>Card number</label>
         </div>
         <div class="form__body--input mini">
             <div class="date">
-                <input type="text" placeholder="Expiry date">
+                <input type="text" placeholder=" ">
+                <label>Expiry date</label>
             </div>
             <div class="cvc">
-                <input type="password" placeholder="CVC/CVV" pattern="[0-9]{3}">
+                <input type="password" placeholder=" " pattern="[0-9]{3}">
+                <label>CVC/CVV</label>
                 <div class="cvc-img">
                     <div class="popup">
                         <div class="popup__form">
@@ -51,10 +54,12 @@
             </div>
         </div>
         <div  class="form__body--input">
-            <input type="text" placeholder="Cardholder name">
+            <input type="text" placeholder=" ">
+            <label>Cardholder name</label>
         </div>
         <div class="form__body--input">
-            <input type="email" placeholder="Email to receive the purchase">
+            <input type="email" placeholder=" ">
+            <label>Email to receive the purchase</label>
         </div>
         <div class="remember">
             <input type="checkbox" id="remember" name="remember" class="remember__input">
