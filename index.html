@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
-  <form class="form">
+  <form class="form" method="GET" action="#">
     <div class="form__head">
         <div>
             <span>
@@ -29,19 +29,25 @@
             Pay with card
         </div>
         <div class="form__body--input">
-            <input type="text" placeholder=" ">
+            <input type="text" placeholder=" " class="field" pattern="[0-9]{16}">
             <label>Card number</label>
+            <div class="wrong error hidden">Enter a 16-digit card number</div>
+            <div class="empty error hidden">Number must not be empty</div>
         </div>
         <div class="form__body--input mini">
             <div class="date">
-                <input type="text" placeholder=" ">
+                <input type="text" placeholder=" " class="field" pattern="[0-1]{1}[0-9]{1}/[0-9]{2}">
                 <label>Expiry date</label>
+                <div class="wrong error hidden">Expiry date is in the past</div>
+                <div class="empty error hidden">Date must not be empty</div>
             </div>
             <div class="cvc">
-                <input type="password" placeholder=" " pattern="[0-9]{3}">
+                <input type="password" placeholder=" " pattern="[0-9]{3}" class="field">
                 <label>CVC/CVV</label>
+                <div class="wrong error error-cvc hidden">Security code must be 3 digits</div>
+                <div class="empty error error-cvc hidden">Number must not be empty</div>
                 <div class="cvc-img">
-                    <div class="popup">
+                    <div class="popup hidden">
                         <div class="popup__form">
                             <div> <img src="img/CCV icon.png">
                             </div>
@@ -54,12 +60,16 @@
             </div>
         </div>
         <div  class="form__body--input">
-            <input type="text" placeholder=" ">
+            <input type="text" placeholder=" " class="field" pattern="[^0-9]">
             <label>Cardholder name</label>
+            <div class="wrong error hidden">It can't be numbers</div>
+            <div class="empty error hidden">Name must not be empty</div>
         </div>
         <div class="form__body--input">
-            <input type="email" placeholder=" ">
+            <input type="email" placeholder=" " class="field" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
             <label>Email to receive the purchase</label>
+            <div class="wrong error hidden">Email doesn't exist</div>
+            <div class="empty error hidden">Address’ must not be empty</div>
         </div>
         <div class="remember">
             <input type="checkbox" id="remember" name="remember" class="remember__input">

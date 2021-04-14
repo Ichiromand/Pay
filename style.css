@@ -180,10 +180,6 @@
     cursor: pointer;
 }
 
-.popup {
-    display: none;
-}
-
 .popup__form {
     position: absolute;
     display: flex;
@@ -191,8 +187,8 @@
     height: 91px;
     border-radius: 6px;
     background: #333b50;
-    top: 105px;
-    left: 30px;
+    top: -100px;
+    left: -20px;
     align-items: center;
 }
 
@@ -217,6 +213,32 @@
     background: #333b50;
     position: absolute;
     top: 57px;
-    right: 2px;
+    right: 0;
     transform: rotate(45deg);
 }
+
+.error {
+    font-size: 10px;
+    line-height: 15px;
+    color: #FFFFFF;    
+    position: absolute;
+    background: #FC7E57;
+    padding: 1px 5px 5px 5px;
+    border-radius: 0 3px 3px 3px;
+    margin-top: 2px;
+    cursor: default;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  .error-input {
+    border-bottom-color: #FC7E57;
+  }
+
+  .error-cvc {
+    line-height: 11px;
+    padding: 2px 4px 3px 6px;
+    top: 25px;
+  }
