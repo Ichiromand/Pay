@@ -1,6 +1,7 @@
 let inputs = document.querySelectorAll('.field');
 let button = document.querySelector('.form__foot');
 let errorValidate = false;
+let form = document.querySelector('.form')
 
 function validateField () {
   if (!errorValidate) {
@@ -33,7 +34,9 @@ for (let input of inputs) {
     validateField()
   })
 }
-button.onclick = function() {
-  errorValidate = true;
-	validateField()
-}       
+
+form.addEventListener('submit', function(evt) {
+    event.preventDefault()
+    errorValidate = true;
+    validateField()
+})    
